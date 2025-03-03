@@ -2,15 +2,15 @@
 
 ## Overview
 
-EMFF-2025_V1.0.pb provides a powerful, flexible, and user-friendly toolset designed for molecular dynamics (MD) simulations. This force field is developed based on DeePMD-kit ([DeePMD-kit Documentation](https://docs.deepmodeling.com/projects/deepmd/en/master/index.html#)), supporting Windows and Linux platforms and is compatible with LAMMPS 2021 and later versions with DeepMD integration.
+* EMFF-2025_V1.0.pb provides a powerful, flexible, and user-friendly toolset designed for molecular dynamics (MD) simulations. This force field is developed based on DeePMD-kit ([DeePMD-kit Documentation](https://docs.deepmodeling.com/projects/deepmd/en/master/index.html#)), supporting Windows and Linux platforms and is compatible with LAMMPS 2021 and later versions with DeepMD integration.
 
-For the installation and usage of DeepMD-enabled LAMMPS, please refer to the official guide: [LAMMPS-DeepMD Instructions](https://docs.deepmodeling.com/projects/deepmd/en/master/third-party/lammps-command.html).
+* For the installation and usage of DeepMD-enabled LAMMPS, please refer to the official guide: [LAMMPS-DeepMD Instructions](https://docs.deepmodeling.com/projects/deepmd/en/master/third-party/lammps-command.html).
 
-Thanks to GPU parallel computing architecture, EMFF-2025_V1.0.pb significantly accelerates LAMMPS execution, achieving nearly 30 times speedup. Related research results can be found in the following references:
+* Thanks to GPU parallel computing architecture, EMFF-2025_V1.0.pb significantly accelerates LAMMPS execution, achieving nearly 30 times speedup. Related research results can be found in the following references:
 
-	Phys. Chem. Chem. Phys., 2022, 24, 25885-25894.
-	Phys. Chem. Chem. Phys., 2023, 25, 12841-12853.
-	Phys. Chem. Chem. Phys., 2024, 26, 9984-9997.
+		Phys. Chem. Chem. Phys., 2022, 24, 25885-25894.
+		Phys. Chem. Chem. Phys., 2023, 25, 12841-12853.
+		Phys. Chem. Chem. Phys., 2024, 26, 9984-9997.
  
 This force field is applicable to thermal decomposition simulations, equation of state (EOS) calculations, and structural optimizations for energetic materials and their analogous structures/crystals.
 
@@ -31,10 +31,13 @@ This force field is applicable to thermal decomposition simulations, equation of
 
 In the examples directory, we provide LAMMPS standard input files (including in and data files) for RDX, HMX, and CL-20 thermal decomposition simulations. An example input file format is shown below:
 
-
-
+* Lammps input file [RDX.in](https://github.com/MingjieWen/General-NNP-model-for-C-H-N-O-Energetic-Materials/blob/main/Examples/RDX/RDX.in)
+* Data file [RDX.data](https://github.com/MingjieWen/General-NNP-model-for-C-H-N-O-Energetic-Materials/blob/main/Examples/RDX/RDX.data)
 
 Please ensure that all parameter settings comply with LAMMPS and DeePMD-kit requirements.
+## Notices
+The original model EMFF-2025_V1.0.pb is suitable for MD simulations of systems with 1-5000 atoms. If you need to run simulations with a larger number of atoms, please use the compressed model.Model compression extracts the neural network structure and its parameters (weights, biases, etc.) from a trained model, significantly speeding up MD inference while maintaining minimal accuracy loss. Depending on the simulation system and training parameters, compression can achieve over 10× acceleration on both CPU and GPU devices. Additionally, model compression greatly reduces memory usage, lowering memory consumption by up to 20× under the same hardware conditions.When using model compression commands, be mindful of version compatibility. It is recommended to use the same version of the program, as lower-version frozen models require version conversion before compression.
+For details on model compression methods, please refer to: [Model compress](https://docs.deepmodeling.com/projects/deepmd/en/master/freeze/compress.html)
 
 ## Citation & Contact Information
 
