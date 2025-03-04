@@ -41,7 +41,7 @@ For details on model compression methods, please refer to: [Model compress](http
 
 ## Citation & Contact Information
 
-* EMFF-2025_V1.0.pb is developed by the School of Mechatronics Engineering and the National Key Laboratory of Explosion Science and Safety, Beijing Institute of Technology, led by Prof. Dongping Chen and Prof. Qingzhao Chu.
+* EMFF-2025_V1.0.pb model was developed under the leadership of Prof. Dongping Chen and Prof. Qingzhao Chu from the School of Mechatronical Engineering of Beijing Institute of Technology and the State Key Laboratory of Explosion Science and Safety Protection
 * If you find EMFF-2025_V1.0.pb useful in your research, we encourage you to star ⭐ this project! When using EMFF-2025_V1.0.pb in scientific publications, please cite the relevant papers.
 
 ## 📩 Contact Us:
